@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Contact Techy</title>
+    <meta
+      name="description"
+      content="Techy's contact information is found right here"
+    />
+    <meta name="viewport" content="width=device-width, intial-scale=1.0" />
+    <link href="css/styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.typekit.net/hmu8afg.css" />
+    <link rel="stylesheet" href="css/font/flaticon.css" />
+    <script
+      src="https://kit.fontawesome.com/41fed443ad.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="home">
+    <header class="main-header">
+      <div class="social-media-menu">
+        <a href="index.html"
+          ><span class="hidden-text">Visit our Facebook</span>
+          <i class="flaticon-facebook" class="icons"></i>
+        </a>
+        <a href="index.html"
+          ><span class="hidden-text">Visit our Instagram</span>
+          <i class="flaticon-instagram" class="icons"></i>
+        </a>
+        <a href="index.html"
+          ><span class="hidden-text">Visit our Twitter</span>
+          <i class="flaticon-twitter" class="icons"></i>
+        </a>
+        <a href="index.html"
+          ><span class="hidden-text">Share our site on Messenger</span>
+          <i class="flaticon-messenger" class="icons"></i>
+        </a>
+      </div>
+      <a href="index.html">
+        <div class="techy-title">
+          <h1 class="title-text">Techy</h1>
+          <p class="subtitle-text">Your supplier of product reviews.</p>
+        </div>
+      </a>
+      <nav class="nav-container">
+        <button class="hamburger" id="hamburger" aria-label="Open Mobile Menu">
+          <i class="fas fa-bars"></i>
+        </button>
+        <button
+          class="close-burger"
+          id="close-burger"
+          aria-label="Close Mobile Menu"
+        >
+          <i class="fas fa-times"></i>
+        </button>
+        <ul class="nav-bar" id="nav-bar">
+          <li class="nav-button">
+            <a href="index.html">Home</a>
+          </li>
+          <li class="nav-button">
+            <a href="posts.html">Posts</a>
+          </li>
+          <li class="nav-button">
+            <a href="about.html">About</a>
+          </li>
+          <li class="nav-button" id="active">
+            <a href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="fade-out" id="fade-out"></div>
+      <h2 class="site-title">Contact <span class="techy-text">Techy</span></h2>
+      <div id="contact-information-form-container">
+        <div class="contact-information-map-container">
+          <section class="contact-information">
+            <section class="contact-category">
+              <p class="category-title">Adress:</p>
+              <p>Kirsten Flagstads Plass 1.</p>
+              <p>0150 Oslo, Norge.</p>
+            </section>
+            <section class="contact-category">
+              <p class="category-title">Phone:</p>
+              <p>222 23 242</p>
+            </section>
+            <section class="contact-category">
+              <p class="category-title">E-mail:</p>
+              <p>techy@techy.com</p>
+            </section>
+          </section>
+          <div id="map-container">
+            <iframe
+              class="g-map"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4001.359347280674!2d10.755853787335015!3d59.9042666915083!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46416e8ba321f715%3A0x1cb6a7c6a2a2d611!2sOperahuset%20Oslo!5e0!3m2!1sno!2sse!4v1619266239633!5m2!1sno!2sse"
+            ></iframe>
+          </div>
+        </div>
+        <h2 class="site-title">Or use our contact form below:</h2>
+        <div id="form-container">
+          <form id="contact-form">
+            <div class="form-item">
+              <label class="formLabel" for="subject">Subject:</label>
+              <input id="subject" class="form" type="text" name="subject" />
+              <div id="subjectError" class="form-error">
+                Please enter a subject. Atleast 15 characters.
+              </div>
+            </div>
+            <div class="form-item">
+              <label class="formLabel" for="name">Your Name:</label>
+              <input id="name" class="form" type="text" name="name" />
+              <div id="nameError" class="form-error">
+                Please enter your name. Atleast 5 characters.
+              </div>
+            </div>
+            <div class="form-item">
+              <label class="formLabel" for="e-mail">Your E-mail:</label>
+              <input id="e-mail" class="form" type="text" name="e-mail" />
+              <div id="emailError" class="form-error">
+                Please enter a valid e-mail.
+              </div>
+            </div>
+            <div class="form-item">
+              <label class="formLabel" for="details">Further details:</label>
+              <textarea
+                id="details"
+                form="contact-form"
+                name="details"
+                placeholder="Your message..."
+              ></textarea>
+              <div id="detailsError" class="form-error">
+                Please tell us abit more about the problem. Atleast 25
+                characters.
+              </div>
+            </div>
+            <div class="form-item" id="form-button-item">
+              <button id="form-submit">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <a class="back-to-top-btn" id="btt-btn">
+        <i class="fas fa-arrow-up"></i>
+      </a>
+    </main>
+    <footer id="footer">
+      <p>©copyright <span class="author-copyright">Pål Werven</span></p>
+    </footer>
+    <script src="js/contactform.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
