@@ -45,7 +45,7 @@ closeBurger.addEventListener("click", () => {
 
 window.addEventListener('mouseup',(event) => {
 
-if(event.target != navBar && event.target.parentNode != navBar && windowSize.matches) {
+if(event.target !== navBar && event.target.parentNode !== navBar && windowSize.matches) {
 
     navBar.classList.remove("show");
     hamburger.style.display = "block";

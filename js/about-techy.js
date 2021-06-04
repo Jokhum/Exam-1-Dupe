@@ -11,9 +11,6 @@ async function getAuthor() {
     const json = await response.json();
 
 
-    console.log(json);
-
-
     aboutContainer.innerHTML = "";
     
         for (let i = 0; i < json.length; i++) {
@@ -36,7 +33,8 @@ async function getAuthor() {
     
         } catch (error) {
 
-            console.log(error);
+            aboutContainer.innerHTML += `
+                                        <h2>An error has occured. Please try again later.</h2>`
 
         }
 }

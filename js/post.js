@@ -1,4 +1,5 @@
 const postPage = document.querySelector(".single-post");
+
 const pageHeading = document.querySelector(".site-title");
 
 const queryString = document.location.search;
@@ -8,8 +9,6 @@ const params = new URLSearchParams(queryString);
 const id = params.get("id");
 
 const pageUrl = "https://jkmzd.eu/blog-api/wp-json/wp/v2/posts/" + id + `?_embed`;
-
-console.log(id);
 
 
 
@@ -22,22 +21,17 @@ async function getPostInfo() {
     const response = await fetch(pageUrl);
     const postInfo = await response.json();
     
-    
-
     createHtml(postInfo);
-
-    console.log(postInfo);
 
     }
     catch(error) {
-        console.log(error);
+
         postPage.innerHTML = "An error has occurred.";
+
     }
 }
 
-
 getPostInfo();
-
 
 
 // Create HTML for the Post Individual Page.
@@ -45,7 +39,6 @@ getPostInfo();
 
 function createHtml(postInfo) {
     
-
     const postTitle = postInfo.title.rendered;
     const postDate = postInfo.date.split("T")[0];
     const postImage = postInfo._embedded["wp:featuredmedia"][0].media_details.sizes.large.source_url;
@@ -83,7 +76,6 @@ function createHtml(postInfo) {
 
     catch(error) {
 
-        console.log(error);
         postPage.innerHTML = "An error has occurred."
 
     }

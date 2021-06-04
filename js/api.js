@@ -9,18 +9,25 @@ let offset = 0;
 // Fixed results on screen at once by media width.
 
 function validateWidth() {
-    if (window.innerWidth <= 1024) {
+
+    if (window.innerWidth <= 749) {
+    
         return 1;
+    
     }
 
-    if (window.innerWidth >= 1025) {
+    else if (window.innerWidth >= 750 && window.innerWidth <= 1919) {
+
+        return 3;
+    }
+
+    else {
         return 5;
     }
 
 }
 validateWidth();
 
-console.log(validateWidth);
 
 // API call
 
@@ -35,7 +42,6 @@ async function getPosts(url) {
 
     const json = await response.json();
 
-    console.log(json);
 
     // Button Visibility Criteria
 
@@ -49,14 +55,21 @@ async function getPosts(url) {
 
     }
 
-    if (json.length < 1 && window.innerWidth <= 1024) {
+    if (json.length < 1 && window.innerWidth <= 749) {
+
+        buttonNext.style.display = "none";
+        noResults.style.display = "block";
+
+    }
+
+    else if (json.length < 3 && window.innerWidth >= 750 & window.innerWidth <= 1919) {
 
         buttonNext.style.display = "none";
         noResults.style.display = "block";
 
     }
     
-    else if (json.length < 5 && window.innerWidth >= 1025) {
+    else if (json.length < 5 && window.innerWidth >= 1920) {
 
         buttonNext.style.display = "none";
 
@@ -99,11 +112,11 @@ async function getPosts(url) {
     }
 
     } catch (error) {
-        console.log(error);
+
+        postsContainer.innerHTML += `<h2>An error has occured.</h2>`;
+
     }
 }
-
-
 
 getPosts(url);
 
@@ -111,11 +124,16 @@ getPosts(url);
 
 buttonPrevious.addEventListener("click", () => {
 
-    if (windowSize.matches) {
+    if (window.innerWidth <= 749) {
 
         offset -= 1;
 
-    } else {
+    } else if (window.innerWidth >= 750 && window.innerWidth <= 1919){
+
+        offset -=3;
+    }
+    
+    else {
         offset -=5;
     }
 
@@ -124,12 +142,16 @@ buttonPrevious.addEventListener("click", () => {
 
 buttonNext.addEventListener("click", () => {
 
-    if (windowSize.matches) {
+    if (window.innerWidth <= 749) {
 
         offset += 1;
 
+    } else if (window.innerWidth >= 750 && window.innerWidth <= 1919) {
+
+        offset += 3;
+
     } else {
-        offset +=5;
+        offset += 5;
     }
 
     getPosts(url);

@@ -55,9 +55,9 @@ h1 {
 
 h2 {
   font-family: niveau-grotesk, sans-serif;
-  font-weight: 400;
+  font-weight: 600;
   font-style: normal;
-  font-size: 20px;
+  font-size: 22px;
   color: #4b4b4b;
 }
 
@@ -65,7 +65,7 @@ p {
   font-family: niveau-grotesk, sans-serif;
   font-weight: 300;
   font-style: normal;
-  font-size: 14px;
+  font-size: 16px;
   color: #4b4b4b;
 }
 
@@ -176,15 +176,15 @@ p {
 
 .title-text {
   margin-bottom: 2px;
-  font-size: 1.5vw;
+  font-size: 2vw;
 }
 
 .subtitle-text {
   font-family: niveau-grotesk, sans-serif;
   font-weight: 300;
   font-style: italic;
-  font-size: 0.5vw;
-  width: 100px;
+  font-size: 1vw;
+  width: 7vw;
   margin-left: auto;
   margin-right: auto;
 }
@@ -242,7 +242,7 @@ p {
 .card-publish-date {
   color: #4b4b4b;
   width: 80%;
-  font-size: 12px;
+  font-size: 14px;
   padding: 10px 0 10px 0;
 }
 
@@ -269,7 +269,7 @@ p {
 .site-title {
   padding: 2rem 1rem 2rem 1rem;
   text-align: center;
-  font-weight: 500;
+  font-weight: 900;
 }
 
 .techy-text {
@@ -330,6 +330,27 @@ p {
 }
 
 /* Post View on Posts Page */
+
+.search-bar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+#searchBar {
+  border: 1px solid #4b4b4b;
+  color: #4b4b4b;
+  padding: 8px;
+  border-radius: 5px;
+  margin: 2rem;
+}
+
+#search-bar-icon {
+  position: relative;
+  right: 55px;
+  color: #4b4b4b;
+}
 
 .posts-container {
   display: flex;
@@ -518,12 +539,18 @@ p {
   border-radius: 5px;
 }
 
+#form-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
 #contact-form {
   display: block;
   background-color: #4b4b4b;
   padding: 1rem;
   border-radius: 5px;
-  width: 300px;
+  width: 500px;
 }
 
 #contact-form input,
@@ -557,7 +584,6 @@ textarea {
 
 #details {
   height: 200px;
-  width: 268px;
   font-size: 14px;
   resize: none;
 }
@@ -731,24 +757,6 @@ textarea {
     gap: 50px;
   }
 
-  /* Blog Cards */
-
-  .post-card {
-    height: 400px;
-    width: 250px;
-    border: 1px solid #4b4b4b;
-    border-radius: 5px 5px 0px 0px;
-  }
-
-  .post-card-title {
-    margin-bottom: 0.5rem;
-  }
-
-  .post-card img {
-    width: 100%;
-    height: auto;
-  }
-
   /* Individual Posts */
 
   .page-container img {
@@ -779,16 +787,32 @@ textarea {
   }
 }
 
+@media only screen and (min-width: 1800px) {
+  /* Blog Cards */
+
+  .post-card {
+    height: 400px;
+    width: 250px;
+    border: 1px solid #4b4b4b;
+    border-radius: 5px 5px 0px 0px;
+  }
+
+  .post-card-title {
+    margin-bottom: 0.5rem;
+  }
+
+  .post-card img {
+    width: 100%;
+    height: auto;
+  }
+}
+
 /* SMALL DEVICES */
 
 @media only screen and (max-width: 1024px) {
-  .title-text {
-    font-size: 90%;
-  }
-
   .subtitle-text {
-    font-size: 45%;
-    width: 40px;
+    font-size: 60%;
+    width: 7vw;
   }
 
   .nav-button:hover {
