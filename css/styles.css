@@ -743,10 +743,10 @@ textarea {
   }
 
   #prev-arrow-cont {
-    left: 100px;
+    left: 50px;
   }
   #next-arrow-cont {
-    right: 100px;
+    right: 50px;
   }
 
   /* Posts Page */
